@@ -1,4 +1,4 @@
-# Java: Taller Practico de 18 puntos
+# Java: Servidor CRUD Springboot Hibernate
 
 <p align="center">
 <img src="https://www.sofka.com.co/wp-content/uploads/2021/02/sofkau-logo-horizontal.png">
@@ -58,6 +58,7 @@ Metodo query?__atributo__=__valor__
 Responde en formato JSON con los usuarios que tengan el atributo y valor solicitados
 
 <hr>
+
 ### POST
 `http://localhost:8080/usuario` :
 *BODY enviado en formato JSON*
@@ -70,7 +71,9 @@ Responde en formato JSON con los usuarios que tengan el atributo y valor solicit
 ```
 Creacion de usuario en base a body peticion en formato JSON, con la informacion del usuario deseado a crear en DB. El servidor respondera en el mismo formato JSON con la informacion del usuairo creado. __Id autogenerado al crear los usuarios__
 *En caso de error en algun parametro (tipo de dato, nombre invalido atributo) el servidor devolvera un error y no creara el usuario*
+
 <hr>
+
 ### PUT
 `http://localhost:8080/usuario/{id}` *ID refiere a la identificacion unica del usuario*:
 *BODY enviado en formato JSON*
@@ -86,6 +89,7 @@ Modificacion de usuario por medio de su ID, y requiriendo un Body del usuario en
 En caso de error en algun parametro (tipo de dato, nombre invalido atributo) el servidor devolvera un error y no creara el usuario*
 
 <hr>
+
 ### DELETE
 `http://localhost:8080/usuario/{id}` *ID refiere a la identificacion unica del usuario*:
 Peticion delete para eliminar el usuario con ID requerido de la base de datos
